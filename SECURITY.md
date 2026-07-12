@@ -10,4 +10,4 @@ Do not commit:
 - Unpublished implementation details that should stay research-private
 - Real `.env` files
 
-Use `.env.example` only for non-secret placeholder variable names. Any value prefixed with `VITE_` is exposed to the browser after build, so it must be safe for the public.
+This website currently does not use environment variables. If environment variables are added later, remember that any `VITE_` value is exposed to the browser after build and must be safe for the public.
