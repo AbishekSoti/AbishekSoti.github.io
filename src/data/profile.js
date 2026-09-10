@@ -7,49 +7,9 @@ export const profile = {
   linkedinUrl: "https://www.linkedin.com/in/abisheksoti",
   scholarUrl: null,
   resumeUrl: "/abishek-soti-resume.pdf",
-  headline: "Compact intelligence, engineered from signal to system.",
+  headline: "Machine learning that holds up beyond the experiment.",
   summary:
-    "I turn difficult sensor data into deployable machine-learning systems: acoustic classifiers, computer-vision pipelines, event-camera workflows and edge inference built to be evaluated, trusted and improved.",
-  objective:
-    "Create ML systems that combine strong representation design, reliable evaluation, compact deep learning and software discipline so models become usable engineering assets.",
-  targetRoles: [
-    "Machine Learning Engineer",
-    "AI Engineer",
-    "Research Engineer",
-    "Software Engineer - ML/AI",
-    "Backend Python Engineer",
-    "MLOps Engineer",
-  ],
-  areasOfWork: [
-    {
-      title: "Acoustic Intelligence",
-      description: "Feature-engineered audio ML for vessel classification and signal understanding.",
-    },
-    {
-      title: "Vision Systems",
-      description: "CNN, transformer and deployed computer-vision workflows.",
-    },
-    {
-      title: "Neuromorphic Sensing",
-      description: "Event-camera research tooling for asynchronous visual data.",
-    },
-    {
-      title: "Edge Inference",
-      description: "Raspberry Pi deployment, monitoring and resource-aware model thinking.",
-    },
-    {
-      title: "ML Software",
-      description: "Python systems that make experiments repeatable and deployment-ready.",
-    },
-  ],
-  credibility: [
-    "MPhil research at Western Sydney University",
-    "IEEE co-authorship and publication experience",
-    "PyTorch model development across audio and vision",
-    "Hugging Face deployment experience",
-    "Raspberry Pi inference and resource monitoring",
-    "Event-camera research with Prophesee cameras",
-  ],
+    "I engineer acoustic, visual and event-based sensing systems around the things that make a result useful: strong representations, honest evaluation, compact models and a clear path to deployment.",
   education: [
     {
       degree: "Master of Philosophy - Machine Learning / Embedded AI",
@@ -72,7 +32,7 @@ export const profile = {
       organization: "Western Sydney University / ICNS / MARCS",
       period: "Current",
       summary:
-        "Researching efficient ML approaches for acoustic classification and embedded deployment, with a focus on evaluation, edge feasibility, and responsible public disclosure while publication work is in progress.",
+        "Researching efficient ML approaches for acoustic classification and embedded deployment, with a focus on evaluation, edge feasibility and reproducible research workflows.",
     },
     {
       role: "Research Assistant - Event Cameras and Neuromorphic Sensing",

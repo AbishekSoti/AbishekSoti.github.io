@@ -5,87 +5,118 @@ export function ThreeBackdrop() {
 
   useEffect(() => {
     const mount = mountRef.current;
-    if (!mount) return undefined;
+    if (!mount || window.matchMedia("(max-width: 640px)").matches) {
+      return undefined;
+    }
 
     let disposed = false;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     async function setup() {
       const THREE = await import("three");
-      if (disposed) return;
+      if (disposed) return undefined;
 
       const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
-    camera.position.z = 6.5;
+      const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+      camera.position.z = 6.4;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.8));
-    renderer.setClearColor(0x000000, 0);
-    mount.appendChild(renderer.domElement);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
+      renderer.setClearColor(0x000000, 0);
+      mount.appendChild(renderer.domElement);
 
-    const group = new THREE.Group();
-    scene.add(group);
+      const signalGroup = new THREE.Group();
+      scene.add(signalGroup);
 
-    const nodeGeometry = new THREE.SphereGeometry(0.025, 12, 12);
-    const nodeMaterial = new THREE.MeshBasicMaterial({ color: 0x126b5f });
-    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x285f9f, transparent: true, opacity: 0.28 });
-    const accentMaterial = new THREE.LineBasicMaterial({ color: 0xb46a22, transparent: true, opacity: 0.35 });
-
-    const points = [];
-    for (let i = 0; i < 42; i += 1) {
-      const x = (i % 7) * 0.58 - 1.9 + Math.sin(i * 1.7) * 0.16;
-      const y = Math.floor(i / 7) * 0.42 - 1.15 + Math.cos(i * 1.1) * 0.12;
-      const z = Math.sin(i * 0.8) * 0.65;
-      const point = new THREE.Vector3(x, y, z);
-      points.push(point);
-
-      const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
-      node.position.copy(point);
-      group.add(node);
-    }
-
-    for (let i = 0; i < points.length - 1; i += 1) {
-      if (i % 7 !== 6) {
-        group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([points[i], points[i + 1]]), lineMaterial));
+      const eventPositions = [];
+      for (let index = 0; index < 168; index += 1) {
+        const column = index % 28;
+        const row = Math.floor(index / 28);
+        const signal = Math.sin(column * 0.63 + row * 1.47);
+        if (signal > -0.12 || (column + row) % 7 === 0) {
+          eventPositions.push(
+            (column / 27) * 5.5 - 2.75,
+            (row / 5) * 2.5 - 1.05 + Math.sin(column * 0.32) * 0.12,
+            Math.cos(index * 0.41) * 0.7,
+          );
+        }
       }
-      if (i + 7 < points.length && i % 3 === 0) {
-        group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([points[i], points[i + 7]]), lineMaterial));
+
+      const eventGeometry = new THREE.BufferGeometry();
+      eventGeometry.setAttribute(
+        "position",
+        new THREE.Float32BufferAttribute(eventPositions, 3),
+      );
+      const eventMaterial = new THREE.PointsMaterial({
+        color: 0x5ee0c2,
+        size: 0.045,
+        transparent: true,
+        opacity: 0.64,
+        sizeAttenuation: true,
+      });
+      const events = new THREE.Points(eventGeometry, eventMaterial);
+      signalGroup.add(events);
+
+      const waveformPoints = Array.from({ length: 150 }, (_, index) => {
+        const x = (index / 149) * 5.8 - 2.9;
+        const y =
+          Math.sin(index * 0.22) * 0.16 +
+          Math.sin(index * 0.071) * 0.09 -
+          1.55;
+        const z = Math.cos(index * 0.13) * 0.22;
+        return new THREE.Vector3(x, y, z);
+      });
+      const waveformGeometry = new THREE.BufferGeometry().setFromPoints(waveformPoints);
+      const waveformMaterial = new THREE.LineBasicMaterial({
+        color: 0xcfe6df,
+        transparent: true,
+        opacity: 0.34,
+      });
+      const waveform = new THREE.Line(waveformGeometry, waveformMaterial);
+      signalGroup.add(waveform);
+
+      const baselineGeometry = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(-2.9, -1.55, 0),
+        new THREE.Vector3(2.9, -1.55, 0),
+      ]);
+      const baselineMaterial = new THREE.LineBasicMaterial({
+        color: 0x5ee0c2,
+        transparent: true,
+        opacity: 0.12,
+      });
+      signalGroup.add(new THREE.Line(baselineGeometry, baselineMaterial));
+
+      function resize() {
+        const { width, height } = mount.getBoundingClientRect();
+        renderer.setSize(width, height, false);
+        camera.aspect = width / Math.max(height, 1);
+        camera.updateProjectionMatrix();
       }
-    }
 
-    const wavePoints = Array.from({ length: 88 }, (_, i) => {
-      const x = (i / 87) * 4.8 - 2.4;
-      return new THREE.Vector3(x, Math.sin(i * 0.34) * 0.14 - 1.65, Math.cos(i * 0.18) * 0.18);
-    });
-    group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(wavePoints), accentMaterial));
+      resize();
+      window.addEventListener("resize", resize);
 
-    function resize() {
-      const { width, height } = mount.getBoundingClientRect();
-      renderer.setSize(width, height, false);
-      camera.aspect = width / Math.max(height, 1);
-      camera.updateProjectionMatrix();
-    }
-
-    resize();
-    window.addEventListener("resize", resize);
-
-    let animationFrame = 0;
-    function render(time = 0) {
-      const t = time * 0.00018;
-      group.rotation.y = -0.32 + Math.sin(t) * 0.08;
-      group.rotation.x = 0.18 + Math.cos(t * 0.8) * 0.035;
-      renderer.render(scene, camera);
-      if (!prefersReducedMotion) animationFrame = window.requestAnimationFrame(render);
-    }
-    render();
+      let animationFrame = 0;
+      function render(time = 0) {
+        const phase = time * 0.00015;
+        signalGroup.rotation.y = -0.18 + Math.sin(phase) * 0.045;
+        signalGroup.position.y = Math.cos(phase * 0.7) * 0.025;
+        renderer.render(scene, camera);
+        if (!prefersReducedMotion) {
+          animationFrame = window.requestAnimationFrame(render);
+        }
+      }
+      render();
 
       return () => {
         window.cancelAnimationFrame(animationFrame);
         window.removeEventListener("resize", resize);
-        nodeGeometry.dispose();
-        nodeMaterial.dispose();
-        lineMaterial.dispose();
-        accentMaterial.dispose();
+        eventGeometry.dispose();
+        eventMaterial.dispose();
+        waveformGeometry.dispose();
+        waveformMaterial.dispose();
+        baselineGeometry.dispose();
+        baselineMaterial.dispose();
         renderer.dispose();
         renderer.domElement.remove();
       };

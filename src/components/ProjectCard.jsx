@@ -12,11 +12,11 @@ function ProjectLink({ href, icon: Icon, children }) {
 }
 
 export function ProjectCard({ project, variant = "card" }) {
-  const caseStudyHref = `/projects/${project.slug}`;
+  const caseStudyHref = "/projects/" + project.slug;
 
   return (
-    <article className={`project-card ${variant === "wide" ? "wide" : ""}`}>
-      <div className={`project-media project-media-${project.categories[0]}`} aria-hidden="true">
+    <article className={"project-card " + (variant === "wide" ? "wide" : "")}>
+      <div className={"project-media project-media-" + project.categories[0]} aria-hidden="true">
         {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : <span>{project.category}</span>}
       </div>
       <div className="project-content">
@@ -26,8 +26,7 @@ export function ProjectCard({ project, variant = "card" }) {
         <p><strong>Problem:</strong> {project.problem}</p>
         <p><strong>Built:</strong> {project.built}</p>
         {project.outcome ? <p className="project-impact">{project.outcome}</p> : null}
-        {project.note ? <p className="project-note">{project.note}</p> : null}
-        <div className="tag-list" aria-label={`${project.title} technologies`}>
+        <div className="tag-list" aria-label={project.title + " technologies"}>
           {project.tags.map((tag) => (
             <span key={tag}>{tag}</span>
           ))}

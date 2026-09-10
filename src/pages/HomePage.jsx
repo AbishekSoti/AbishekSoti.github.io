@@ -1,15 +1,15 @@
-import { AreasOfWork } from "../components/AreasOfWork.jsx";
+import { Contact } from "../components/Contact.jsx";
 import { Hero } from "../components/Hero.jsx";
 import { ProjectsPreview } from "../components/ProjectsPreview.jsx";
-import { SectionDirectory } from "../components/SectionDirectory.jsx";
+import { SignalPlayground } from "../components/SignalPlayground.jsx";
 
 export function HomePage() {
   return (
-    <>
+    <div className="home-page">
       <Hero />
-      <AreasOfWork />
       <ProjectsPreview />
-      <SectionDirectory />
-    </>
+      <SignalPlayground />
+      <Contact />
+    </div>
   );
 }

@@ -21,8 +21,9 @@ export function ProjectsPage() {
           <p className="eyebrow">Projects</p>
           <h1>Engineering breadth across audio, vision, edge AI and software.</h1>
           <p>
-            Reusable project cards highlight the problem, what I built, technologies,
-            verified outcomes where available, individual contribution and public links.
+            A selection of work across physical signals, deep learning, embedded
+            systems and deployable software. Open a case study for the decisions,
+            workflow and verified outcomes behind each project.
           </p>
         </div>
         <div className="filter-chips" aria-label="Project categories">

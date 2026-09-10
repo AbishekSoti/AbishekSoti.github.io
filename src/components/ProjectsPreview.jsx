@@ -1,27 +1,63 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { getFeaturedProjects } from "../data/projects.js";
-import { ProjectCard } from "./ProjectCard.jsx";
 
 const previewProjects = getFeaturedProjects();
 
 export function ProjectsPreview() {
+  const [leadProject, ...supportingProjects] = previewProjects;
+
   return (
-    <section className="section-band muted" id="projects">
+    <section className="section-band work-band" id="selected-work">
       <div className="section-inner">
-        <div className="section-heading with-action">
+        <div className="showcase-heading">
           <div>
-            <p className="eyebrow">Featured work</p>
-            <h2>Three projects showing audio ML, neuromorphic sensing and deployed vision.</h2>
+            <p className="eyebrow">Selected engineering work</p>
+            <h2>Systems built around real constraints.</h2>
           </div>
           <a className="button ghost" href="/projects">
             All projects
             <ArrowRight size={18} />
           </a>
         </div>
-        <div className="project-grid featured-project-grid">
-          {previewProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+        <div className="work-showcase">
+          <a className="work-feature" href={"/projects/" + leadProject.slug}>
+            <div className="work-feature-media">
+              <img src={leadProject.image} alt={leadProject.imageAlt} loading="lazy" />
+              <span className="work-number">01</span>
+            </div>
+            <div className="work-feature-copy">
+              <p className="project-category">{leadProject.category}</p>
+              <h3>{leadProject.title}</h3>
+              <p className="work-statement">{leadProject.homepage.statement}</p>
+              <p className="work-summary">{leadProject.homepage.summary}</p>
+              <div className="work-facts" aria-label="Project highlights">
+                {leadProject.homepage.proof.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
+              <span className="work-link">
+                Read case study
+                <ArrowUpRight size={18} />
+              </span>
+            </div>
+          </a>
+          <div className="work-teasers">
+            {supportingProjects.map((project, index) => (
+              <a className="work-teaser" href={"/projects/" + project.slug} key={project.slug}>
+                <div className="work-teaser-meta">
+                  <span>0{index + 2}</span>
+                  <span>{project.category}</span>
+                </div>
+                <h3>{project.title}</h3>
+                <p className="work-statement">{project.homepage.statement}</p>
+                <p>{project.homepage.summary}</p>
+                <span className="work-link" aria-hidden="true">
+                  Explore project
+                  <ArrowUpRight size={18} />
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

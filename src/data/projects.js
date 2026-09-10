@@ -17,16 +17,20 @@ export const projects = [
     categories: ["audio-ml", "edge-ai", "software"],
     featured: true,
     featuredOrder: 1,
+    homepage: {
+      statement: "A compact model can be the stronger engineering choice.",
+      summary:
+        "Built an end-to-end acoustic classification workflow around representation design, careful evaluation and an efficiency-first model choice.",
+      proof: ["About 98% accuracy", "Compact 2-layer CNN", "Deployment-aware design"],
+    },
     problem:
-      "Underwater acoustic classification needs reliable models that can distinguish vessel audio patterns while respecting research privacy, evaluation discipline and potential edge constraints.",
+      "Underwater acoustic classification needs reliable models that distinguish vessel signatures while remaining efficient enough for realistic deployment constraints.",
     built:
       "Built an end-to-end audio ML workflow covering acoustic feature engineering, compact deep-learning models, benchmark evaluation, classical ML baselines and deployment-aware model selection.",
     contribution:
-      "Owned the practical ML workflow: preprocessing, acoustic representation experiments, model comparison, benchmark evaluation, result interpretation and public-safe research communication.",
+      "Owned the practical ML workflow: preprocessing, acoustic representation experiments, model comparison, benchmark evaluation and result interpretation.",
     outcome:
-      "Achieved about 98% classification accuracy on ShipsEar with a compact 2-layer CNN. Publication-facing method details remain intentionally private.",
-    note:
-      "Public description avoids private datasets, unpublished implementation details, confidential configurations and local file paths.",
+      "Achieved about 98% classification accuracy on ShipsEar with a compact 2-layer CNN, showing that targeted acoustic tasks do not always require very large backbones.",
     tags: ["Python", "PyTorch", "ShipsEar", "STFT", "CNNs", "Transformers", "Classical ML", "Evaluation"],
     links: {
       demo: null,
@@ -38,7 +42,7 @@ export const projects = [
         "A research-engineering project for classifying underwater vessel audio with a focus on efficient model design, reproducible evaluation and deployment-aware thinking.",
       approach: [
         "Prepared audio ML pipelines around feature extraction, training and evaluation.",
-        "Compared compact neural models, acoustic representations and broader ML baselines without exposing publication-sensitive details.",
+        "Compared compact neural models, acoustic representations and broader ML baselines.",
         "Framed model quality together with deployability, generalisation risk and resource-aware model design.",
       ],
       architecture:
@@ -47,17 +51,10 @@ export const projects = [
         "Verified public result: about 98% ShipsEar classification accuracy using a compact 2-layer CNN, presented as evidence that targeted acoustic classifiers can be accurate without oversized backbones when the representation and evaluation workflow are carefully designed.",
       decisions: [
         "Prioritised compact model design for targeted acoustic classification.",
-        "Kept unpublished methods and dataset handling details out of the public site.",
         "Framed accuracy together with efficiency and deployment practicality.",
       ],
       limitations: [
-        "Full method details, private experimental settings and publication-sensitive comparisons are withheld until publication-ready.",
-        "Public links will be added only when code, paper or demo URLs are ready to release.",
-      ],
-      future: [
-        "Add publication link when available.",
-        "Add public-safe diagrams or screenshots.",
-        "Add deployment notes once they are ready to share.",
+        "Detailed methods and experimental settings remain publication-sensitive while the associated research is in progress.",
       ],
     },
   },
@@ -70,16 +67,19 @@ export const projects = [
     categories: ["neuromorphic", "computer-vision", "edge-ai", "software"],
     featured: true,
     featuredOrder: 2,
+    homepage: {
+      statement: "Vision systems that respond to change, not redundant frames.",
+      summary:
+        "Research workflows for asynchronous event data, sensor characterisation, compression and embedded feasibility using Prophesee cameras.",
+    },
     problem:
       "Event cameras produce asynchronous data that needs specialised tooling for sensor characterisation, event processing and deployment-aware analysis.",
     built:
       "Built research workflows with event cameras, sensor characterisation, asynchronous event processing, Python pipelines, Faery integration, Arduino-controlled experiments and event-camera data compression work.",
     contribution:
-      "Contributed to experiment control, data processing, event-stream analysis and public-safe engineering communication around neuromorphic sensing.",
+      "Contributed to experiment control, data processing, event-stream analysis and compression-oriented workflows for neuromorphic sensing.",
     outcome:
-      "Supported research workflows around event-camera reliability, compression and embedded feasibility without exposing confidential experimental configurations.",
-    note:
-      "Raspberry Pi feasibility and embedded constraints are discussed at a high level only.",
+      "Supported repeatable research workflows around event-camera reliability, compression and embedded feasibility.",
     tags: ["Event Cameras", "Prophesee", "Faery", "Python", "Arduino", "Compression", "Raspberry Pi"],
     links: {
       demo: null,
@@ -98,17 +98,13 @@ export const projects = [
       architecture:
         "Event camera -> acquisition workflow -> event processing pipeline -> characterisation/compression analysis -> embedded feasibility review.",
       results:
-        "Public result summary is qualitative: improved research workflow reliability and supported neuromorphic sensing analysis.",
+        "Improved research workflow reliability and supported neuromorphic sensing analysis across acquisition, processing and characterisation.",
       decisions: [
-        "Kept experimental settings and confidential configurations private.",
-        "Focused public messaging on engineering responsibilities and safe outcomes.",
+        "Matched the workflow to asynchronous event data instead of forcing frame-based assumptions.",
+        "Connected acquisition, characterisation and compression work in a repeatable pipeline.",
       ],
       limitations: [
-        "No confidential sensor configuration or unpublished experimental detail is published here.",
-      ],
-      future: [
-        "Add public-safe diagrams or screenshots when available.",
-        "Add publication or repository links if approved for release.",
+        "Detailed sensor settings remain part of ongoing research.",
       ],
     },
   },
@@ -121,6 +117,11 @@ export const projects = [
     categories: ["computer-vision", "software"],
     featured: true,
     featuredOrder: 3,
+    homepage: {
+      statement: "Training was only half the job.",
+      summary:
+        "Compared EfficientNetB2 and Vision Transformer approaches, then shaped the selected model into a reproducible, user-facing inference workflow.",
+    },
     problem:
       "Image-classification projects should show more than notebook accuracy: they should compare models, support reproducible inference and provide a usable demo.",
     built:
@@ -146,19 +147,12 @@ export const projects = [
       architecture:
         "Image input -> preprocessing -> selected PyTorch model -> inference output -> Hugging Face Spaces interface.",
       results:
-        "No verified public metric is shown here yet. Add a measured result once you are ready to publish it.",
+        "The public case study focuses on architecture comparison and the deployment workflow; no benchmark metric is claimed here.",
       decisions: [
         "Presented both transfer learning and transformer-based model comparison.",
         "Used deployment as evidence of end-to-end ML workflow capability.",
       ],
-      limitations: [
-        "Live demo and repository URLs need to be inserted before public release.",
-      ],
-      future: [
-        "Add Hugging Face Space URL.",
-        "Add GitHub repository URL.",
-        "Add screenshots or a public-safe confusion matrix if available.",
-      ],
+
     },
   },
   {
@@ -209,7 +203,7 @@ export const projects = [
     built:
       "Worked on event-camera data compression concepts as part of neuromorphic sensing research workflows.",
     contribution:
-      "Supported compression-oriented analysis while keeping unpublished research details private.",
+      "Supported compression-oriented analysis for efficient event-stream representation.",
     outcome:
       "Demonstrates interest in efficient data handling for event-based vision systems.",
     tags: ["Event Cameras", "Compression", "Neuromorphic", "Python"],
@@ -229,7 +223,7 @@ export const projects = [
     contribution:
       "Developed PyTorch model-building intuition across CNN and transformer architectures.",
     outcome:
-      "Strengthened computer-vision engineering breadth while keeping the portfolio focused on deployable systems.",
+      "Expanded architecture-comparison experience across convolutional and transformer-based vision models.",
     tags: ["Vision Transformer", "Patch Transformer", "PyTorch", "Model Training"],
     links: { demo: null, code: null, publication: null },
   },

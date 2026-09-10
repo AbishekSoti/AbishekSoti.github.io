@@ -45,7 +45,7 @@ export function ProjectCaseStudyPage({ project }) {
         <div className="case-hero">
           {project.image ? (
             <figure className="case-visual">
-              <img src={project.image} alt={project.imageAlt || `${project.title} project visual`} />
+              <img src={project.image} alt={project.imageAlt || project.title + " project visual"} />
             </figure>
           ) : null}
           <p className="eyebrow">Case study</p>
@@ -67,7 +67,6 @@ export function ProjectCaseStudyPage({ project }) {
           <Section title="Results"><p>{study?.results || project.outcome}</p></Section>
           <Section title="Engineering Decisions"><BulletList items={study?.decisions} /></Section>
           <Section title="Limitations"><BulletList items={study?.limitations} /></Section>
-          <Section title="Future Improvements"><BulletList items={study?.future} /></Section>
         </div>
       </div>
     </section>

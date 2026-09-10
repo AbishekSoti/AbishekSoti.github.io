@@ -1,41 +1,56 @@
-import { BookOpen, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowUpRight, BookOpen, Download, Mail, Github, Linkedin } from "lucide-react";
 import { isRealUrl } from "../data/projects.js";
 import { profile } from "../data/profile.js";
 
 const hasPublicEmail = profile.email && !profile.email.includes("example.com");
 
-export function Contact() {
+export function Contact({ page = false }) {
+  const heading = page
+    ? "Bring me the problem, the signal and the constraints."
+    : "Looking for an engineer who connects model performance to the system around it?";
+
+  const description = page
+    ? "For engineering roles, research collaboration or a thoughtful technical conversation, LinkedIn is the most direct way to reach me. You can also review my code and current resume below."
+    : "I am open to software engineering, machine learning engineering and research engineering conversations across underwater acoustics, computer vision, neuromorphic sensing and embedded inference. LinkedIn is the most direct public contact path.";
+
   return (
     <section className="section-band muted" id="contact">
       <div className="section-inner contact-section">
         <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Open to software engineering, ML engineering, research engineering and edge AI roles.</h2>
-          <p>I am interested in teams building reliable ML systems across audio, computer vision, embedded AI, research tooling and Python backend infrastructure. The best public contact path right now is LinkedIn; GitHub is available for code and project context.</p>
+          <p className="eyebrow">{page ? "Start a conversation" : "Contact"}</p>
+          <h2>{heading}</h2>
+          <p>{description}</p>
         </div>
         <div className="contact-links">
           {hasPublicEmail ? (
-            <a href={`mailto:${profile.email}`}>
+            <a className="contact-link" href={"mailto:" + profile.email}>
               <Mail size={18} />
               {profile.email}
             </a>
           ) : null}
-          {isRealUrl(profile.githubUrl) ? (
-            <a href={profile.githubUrl} target="_blank" rel="noreferrer">
-              <Github size={18} />
-              GitHub
-            </a>
-          ) : null}
           {isRealUrl(profile.linkedinUrl) ? (
-            <a href={profile.linkedinUrl} target="_blank" rel="noreferrer">
+            <a className="contact-link primary-contact" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
               <Linkedin size={18} />
               LinkedIn
+              <ArrowUpRight size={16} />
             </a>
           ) : null}
+          {isRealUrl(profile.githubUrl) ? (
+            <a className="contact-link" href={profile.githubUrl} target="_blank" rel="noreferrer">
+              <Github size={18} />
+              GitHub
+              <ArrowUpRight size={16} />
+            </a>
+          ) : null}
+          <a className="contact-link" href={profile.resumeUrl} download>
+            <Download size={18} />
+            Resume
+          </a>
           {isRealUrl(profile.scholarUrl) ? (
-            <a href={profile.scholarUrl} target="_blank" rel="noreferrer">
+            <a className="contact-link" href={profile.scholarUrl} target="_blank" rel="noreferrer">
               <BookOpen size={18} />
               Google Scholar
+              <ArrowUpRight size={16} />
             </a>
           ) : null}
         </div>

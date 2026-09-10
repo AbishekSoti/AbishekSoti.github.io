@@ -10,7 +10,7 @@ export const skillGroups = [
       "Recording-aware evaluation thinking",
       "Macro F1 / accuracy interpretation",
       "Dataset leakage risk analysis",
-      "Publication-safe result framing",
+      "Performance-efficiency trade-off analysis",
     ],
   },
   {
@@ -80,7 +80,7 @@ export const skillGroups = [
       "Multiprocessing and multithreading",
       "Memory-aware data processing",
       "Virtual environment discipline",
-      "Git/GitHub collaboration basics",
+      "Git/GitHub engineering workflows",
     ],
   },
 ];
