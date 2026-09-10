@@ -12,8 +12,25 @@ export const projects = [
     slug: "underwater-acoustic-vessel-classification",
     title: "Underwater Acoustic Vessel Classification",
     category: "Audio ML",
-    image: "/assets/project-images/hydrophone-arrays.jpg",
-    imageAlt: "Hydrophone arrays on an oceanographic research vessel",
+    image: "/assets/project-images/shipsear-vessels-spectrograms.png",
+    imageAlt: "Reference grid pairing ShipsEar vessel classes with their spectrograms",
+    visual: {
+      variant: "research-figure",
+      images: [
+        {
+          src: "/assets/project-images/shipsear-vessels-spectrograms.png",
+          alt: "Reference grid pairing ShipsEar passenger ferries, tugboats and other vessels with acoustic spectrograms",
+        },
+      ],
+      credits: [
+        {
+          name: "ShipsEar class reference, Yuan et al.",
+          href: "https://www.mdpi.com/2077-1312/7/11/380",
+          license: "CC BY 4.0",
+          licenseHref: "https://creativecommons.org/licenses/by/4.0/",
+        },
+      ],
+    },
     categories: ["audio-ml", "edge-ai", "software"],
     featured: true,
     featuredOrder: 1,
@@ -62,8 +79,25 @@ export const projects = [
     slug: "event-based-vision-neuromorphic-sensing",
     title: "Event-Based Vision and Neuromorphic Sensing",
     category: "Neuromorphic",
-    image: "/assets/project-images/cnn-layers.png",
-    imageAlt: "Convolutional feature-processing diagram used as a technical visual",
+    image: "/assets/project-images/event-stream-faces.png",
+    imageAlt: "Faces represented as sparse asynchronous event-camera streams",
+    visual: {
+      variant: "event-stream",
+      images: [
+        {
+          src: "/assets/project-images/event-stream-faces.png",
+          alt: "Neuromorphic camera event streams showing faces, predictions and facial landmarks",
+        },
+      ],
+      credits: [
+        {
+          name: "Faces in Event Streams, Ulzhanbis",
+          href: "https://commons.wikimedia.org/wiki/File:Faces_in_Event_Streams.png",
+          license: "CC BY 4.0",
+          licenseHref: "https://creativecommons.org/licenses/by/4.0/",
+        },
+      ],
+    },
     categories: ["neuromorphic", "computer-vision", "edge-ai", "software"],
     featured: true,
     featuredOrder: 2,
@@ -112,8 +146,48 @@ export const projects = [
     slug: "foodvision-mini-deployed-computer-vision",
     title: "FoodVision Mini - Deployed Computer Vision",
     category: "Computer Vision",
-    image: "/assets/project-images/cnn-layers.png",
-    imageAlt: "Convolutional feature-processing diagram used as a computer vision visual",
+    image: "/assets/project-images/foodvision-pizza.jpg",
+    imageAlt: "Pizza, steak and sushi photographs representing visual food classification",
+    visual: {
+      variant: "triptych",
+      images: [
+        {
+          src: "/assets/project-images/foodvision-pizza.jpg",
+          alt: "Pizza photographed from above",
+          label: "Pizza",
+        },
+        {
+          src: "/assets/project-images/foodvision-steak.jpg",
+          alt: "Cooked steak served on a plate",
+          label: "Steak",
+        },
+        {
+          src: "/assets/project-images/foodvision-sushi.jpg",
+          alt: "Sushi rolls arranged on a plate",
+          label: "Sushi",
+        },
+      ],
+      credits: [
+        {
+          name: "Pizza: Pinar Kucuk",
+          href: "https://unsplash.com/photos/pizza-on-plate-Ae7jQFDTPk4",
+          license: "Unsplash License",
+          licenseHref: "https://unsplash.com/license",
+        },
+        {
+          name: "Steak: UY VO",
+          href: "https://unsplash.com/photos/steak-on-plate-M6dFjjpoqfU",
+          license: "Unsplash License",
+          licenseHref: "https://unsplash.com/license",
+        },
+        {
+          name: "Sushi: Israel Albornoz",
+          href: "https://unsplash.com/photos/a-platter-of-sushi-with-various-toppings-kNH31Q7MDUY",
+          license: "Unsplash License",
+          licenseHref: "https://unsplash.com/license",
+        },
+      ],
+    },
     categories: ["computer-vision", "software"],
     featured: true,
     featuredOrder: 3,

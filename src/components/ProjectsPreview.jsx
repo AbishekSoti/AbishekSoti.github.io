@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { getFeaturedProjects } from "../data/projects.js";
+import { ProjectVisual } from "./ProjectVisual.jsx";
 
 const previewProjects = getFeaturedProjects();
 
@@ -22,7 +23,7 @@ export function ProjectsPreview() {
         <div className="work-showcase">
           <a className="work-feature" href={"/projects/" + leadProject.slug}>
             <div className="work-feature-media">
-              <img src={leadProject.image} alt={leadProject.imageAlt} loading="lazy" />
+              <ProjectVisual project={leadProject} />
               <span className="work-number">01</span>
             </div>
             <div className="work-feature-copy">
@@ -44,17 +45,20 @@ export function ProjectsPreview() {
           <div className="work-teasers">
             {supportingProjects.map((project, index) => (
               <a className="work-teaser" href={"/projects/" + project.slug} key={project.slug}>
-                <div className="work-teaser-meta">
-                  <span>0{index + 2}</span>
-                  <span>{project.category}</span>
+                <div className="work-teaser-media">
+                  <ProjectVisual project={project} />
+                  <span className="work-number">0{index + 2}</span>
                 </div>
-                <h3>{project.title}</h3>
-                <p className="work-statement">{project.homepage.statement}</p>
-                <p>{project.homepage.summary}</p>
-                <span className="work-link" aria-hidden="true">
-                  Explore project
-                  <ArrowUpRight size={18} />
-                </span>
+                <div className="work-teaser-copy">
+                  <p className="project-category">{project.category}</p>
+                  <h3>{project.title}</h3>
+                  <p className="work-statement">{project.homepage.statement}</p>
+                  <p>{project.homepage.summary}</p>
+                  <span className="work-link" aria-hidden="true">
+                    Explore project
+                    <ArrowUpRight size={18} />
+                  </span>
+                </div>
               </a>
             ))}
           </div>

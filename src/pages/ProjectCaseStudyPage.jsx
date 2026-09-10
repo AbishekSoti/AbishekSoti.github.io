@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { isRealUrl } from "../data/projects.js";
+import { ProjectVisual, ProjectVisualCredits } from "../components/ProjectVisual.jsx";
 
 function Section({ title, children }) {
   if (!children) return null;
@@ -43,9 +44,10 @@ export function ProjectCaseStudyPage({ project }) {
           Projects
         </a>
         <div className="case-hero">
-          {project.image ? (
+          {project.image || project.visual?.images?.length ? (
             <figure className="case-visual">
-              <img src={project.image} alt={project.imageAlt || project.title + " project visual"} />
+              <ProjectVisual project={project} loading="eager" />
+              <ProjectVisualCredits project={project} />
             </figure>
           ) : null}
           <p className="eyebrow">Case study</p>

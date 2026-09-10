@@ -20,7 +20,20 @@ export function ThreeBackdrop() {
       const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
       camera.position.z = 6.4;
 
-      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      const rendererOptions = { antialias: true, alpha: true };
+      const canvas = document.createElement("canvas");
+      const context =
+        canvas.getContext("webgl2", rendererOptions) ||
+        canvas.getContext("webgl", rendererOptions);
+
+      // The hero remains fully usable when a browser or GPU blocks WebGL.
+      if (!context) return undefined;
+
+      const renderer = new THREE.WebGLRenderer({
+        ...rendererOptions,
+        canvas,
+        context,
+      });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
       renderer.setClearColor(0x000000, 0);
       mount.appendChild(renderer.domElement);
@@ -123,10 +136,14 @@ export function ThreeBackdrop() {
     }
 
     let cleanup;
-    setup().then((teardown) => {
-      cleanup = teardown;
-      if (disposed && cleanup) cleanup();
-    });
+    setup()
+      .then((teardown) => {
+        cleanup = teardown;
+        if (disposed && cleanup) cleanup();
+      })
+      .catch(() => {
+        cleanup = undefined;
+      });
 
     return () => {
       disposed = true;

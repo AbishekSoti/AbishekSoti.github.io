@@ -1,5 +1,6 @@
 import { BookOpen, ExternalLink, Github } from "lucide-react";
 import { isRealUrl } from "../data/projects.js";
+import { ProjectVisual } from "./ProjectVisual.jsx";
 
 function ProjectLink({ href, icon: Icon, children }) {
   const external = href.startsWith("http");
@@ -16,8 +17,8 @@ export function ProjectCard({ project, variant = "card" }) {
 
   return (
     <article className={"project-card " + (variant === "wide" ? "wide" : "")}>
-      <div className={"project-media project-media-" + project.categories[0]} aria-hidden="true">
-        {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : <span>{project.category}</span>}
+      <div className={"project-media project-media-" + project.categories[0]}>
+        <ProjectVisual project={project} />
       </div>
       <div className="project-content">
         {project.featured ? <p className="featured-label">Featured project</p> : null}
