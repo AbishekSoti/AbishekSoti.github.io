@@ -10,9 +10,10 @@
     "postbuild": "cp dist/index.html dist/404.html"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "lucide-react": "^0.468.0"
+    "three": "^0.186.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.0",

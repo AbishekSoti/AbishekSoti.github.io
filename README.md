@@ -10,6 +10,7 @@ This site presents Abishek Soti as a Software Engineer and Machine Learning Engi
 - Vite
 - JavaScript
 - CSS
+- Three.js
 - GitHub Pages
 - GitHub Actions
 

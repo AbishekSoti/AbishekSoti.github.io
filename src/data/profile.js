@@ -7,9 +7,9 @@ export const profile = {
   linkedinUrl: "https://www.linkedin.com/in/abisheksoti",
   scholarUrl: null,
   resumeUrl: "/abishek-soti-resume.pdf",
-  headline: "Building intelligent systems across audio, vision and edge AI.",
+  headline: "Building intelligent systems for audio, vision and edge AI.",
   summary:
-    "I build Python and PyTorch systems spanning acoustic machine learning, computer vision, neuromorphic sensing and embedded deployment. My MPhil research strengthens the engineering story: practical model development, evaluation, deployment discipline and research-grade problem solving.",
+    "I build Python and PyTorch systems across acoustic ML, computer vision, neuromorphic sensing and embedded deployment. My work connects model development with software structure, evaluation, deployment discipline and practical research engineering.",
   objective:
     "Build production-ready ML and AI systems: reliable Python services, reproducible training, deployment pipelines, monitoring, and maintainable engineering workflows.",
   targetRoles: [

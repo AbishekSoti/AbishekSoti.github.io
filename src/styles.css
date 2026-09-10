@@ -28,8 +28,7 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(rgba(247, 248, 245, 0.94), rgba(247, 248, 245, 0.94)),
-    url("/assets/hero-ml-embedded-bg.png") center top / cover fixed,
+    linear-gradient(180deg, rgba(247, 248, 245, 0.98), rgba(239, 244, 241, 0.96)),
     var(--bg);
   color: var(--text);
 }
@@ -127,9 +126,9 @@ a {
   display: grid;
   align-items: center;
   overflow: hidden;
+  isolation: isolate;
   background:
-    linear-gradient(90deg, rgba(247, 248, 245, 0.94) 0%, rgba(247, 248, 245, 0.84) 48%, rgba(247, 248, 245, 0.56) 100%),
-    url("/assets/hero-ml-embedded-bg.png") center right / cover no-repeat,
+    linear-gradient(90deg, rgba(247, 248, 245, 0.98) 0%, rgba(247, 248, 245, 0.92) 52%, rgba(247, 248, 245, 0.80) 100%),
     var(--bg);
 }
 
@@ -1027,5 +1026,100 @@ h3 {
 
   .filter-chips button {
     flex: 0 0 auto;
+  }
+}
+
+
+/* Professional visual pass */
+.three-backdrop {
+  position: absolute;
+  inset: 0 0 0 43%;
+  z-index: -1;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.three-backdrop canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(18, 107, 95, 0.05) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, rgba(40, 95, 159, 0.05) 0 1px, transparent 1px 100%);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(90deg, transparent, #000 34%, #000 100%);
+}
+
+.capability-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.capability-strip span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid rgba(18, 107, 95, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--accent-strong);
+  font-size: 0.86rem;
+  font-weight: 760;
+}
+
+.hero-panel > div,
+.project-card,
+.directory-card,
+.area-card,
+.focus-panel,
+.timeline-item,
+.skill-group,
+.case-section {
+  box-shadow: 0 12px 36px rgba(24, 32, 29, 0.055);
+}
+
+.project-card,
+.directory-card,
+.area-card,
+.focus-panel,
+.timeline-item,
+.skill-group,
+.case-section {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.project-media {
+  min-height: 96px;
+}
+
+.project-content p strong {
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .three-backdrop {
+    inset: 28% 0 0 0;
+    opacity: 0.32;
+  }
+}
+
+@media (max-width: 640px) {
+  .three-backdrop {
+    display: none;
+  }
+
+  .capability-strip span {
+    font-size: 0.82rem;
   }
 }
