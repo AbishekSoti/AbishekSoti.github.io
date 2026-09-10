@@ -12,15 +12,17 @@ export const projects = [
     slug: "underwater-acoustic-vessel-classification",
     title: "Underwater Acoustic Vessel Classification",
     category: "Audio ML",
+    image: "/assets/project-images/hydrophone-arrays.jpg",
+    imageAlt: "Hydrophone arrays on an oceanographic research vessel",
     categories: ["audio-ml", "edge-ai", "software"],
     featured: true,
     featuredOrder: 1,
     problem:
       "Underwater acoustic classification needs reliable models that can distinguish vessel audio patterns while respecting research privacy, evaluation discipline and potential edge constraints.",
     built:
-      "Built an end-to-end audio ML and research-engineering workflow covering Python pipelines, signal processing, feature extraction, PyTorch models, CNNs, Transformers, classical ML baselines, evaluation and edge-deployment exploration.",
+      "Built an end-to-end audio ML workflow covering acoustic feature engineering, compact deep-learning models, benchmark evaluation, classical ML baselines and deployment-aware model selection.",
     contribution:
-      "Owned the practical ML workflow: preprocessing, model experimentation, benchmark evaluation, result interpretation and public-safe project communication.",
+      "Owned the practical ML workflow: preprocessing, acoustic representation experiments, model comparison, benchmark evaluation, result interpretation and public-safe research communication.",
     outcome:
       "Achieved about 98% classification accuracy on ShipsEar with a compact 2-layer CNN. Publication-facing method details remain intentionally private.",
     note:
@@ -36,20 +38,20 @@ export const projects = [
         "A research-engineering project for classifying underwater vessel audio with a focus on efficient model design, reproducible evaluation and deployment-aware thinking.",
       approach: [
         "Prepared audio ML pipelines around feature extraction, training and evaluation.",
-        "Compared compact neural models with broader ML approaches without exposing publication-sensitive details.",
-        "Considered edge feasibility and deployment constraints as part of the engineering framing.",
+        "Compared compact neural models, acoustic representations and broader ML baselines without exposing publication-sensitive details.",
+        "Framed model quality together with deployability, generalisation risk and resource-aware model design.",
       ],
       architecture:
         "Audio input -> preprocessing and features -> model comparison -> evaluation -> deployment-readiness review.",
       results:
-        "Verified public result: about 98% ShipsEar classification accuracy using a compact 2-layer CNN.",
+        "Verified public result: about 98% ShipsEar classification accuracy using a compact 2-layer CNN, presented as evidence that targeted acoustic classifiers can be accurate without oversized backbones when the representation and evaluation workflow are carefully designed.",
       decisions: [
         "Prioritised compact model design for targeted acoustic classification.",
         "Kept unpublished methods and dataset handling details out of the public site.",
         "Framed accuracy together with efficiency and deployment practicality.",
       ],
       limitations: [
-        "Full method details are withheld until publication-ready.",
+        "Full method details, private experimental settings and publication-sensitive comparisons are withheld until publication-ready.",
         "Public links will be added only when code, paper or demo URLs are ready to release.",
       ],
       future: [
@@ -63,6 +65,8 @@ export const projects = [
     slug: "event-based-vision-neuromorphic-sensing",
     title: "Event-Based Vision and Neuromorphic Sensing",
     category: "Neuromorphic",
+    image: "/assets/project-images/cnn-layers.png",
+    imageAlt: "Convolutional feature-processing diagram used as a technical visual",
     categories: ["neuromorphic", "computer-vision", "edge-ai", "software"],
     featured: true,
     featuredOrder: 2,
@@ -112,6 +116,8 @@ export const projects = [
     slug: "foodvision-mini-deployed-computer-vision",
     title: "FoodVision Mini - Deployed Computer Vision",
     category: "Computer Vision",
+    image: "/assets/project-images/cnn-layers.png",
+    imageAlt: "Convolutional feature-processing diagram used as a computer vision visual",
     categories: ["computer-vision", "software"],
     featured: true,
     featuredOrder: 3,
@@ -159,6 +165,8 @@ export const projects = [
     slug: "raspberry-pi-inference-deployment",
     title: "Raspberry Pi Inference Deployment",
     category: "Edge AI",
+    image: "/assets/project-images/raspberry-pi.png",
+    imageAlt: "Raspberry Pi single-board computer",
     categories: ["edge-ai", "software"],
     problem:
       "ML models need to be tested against real device constraints before they can be taken seriously for embedded AI use cases.",
@@ -175,6 +183,8 @@ export const projects = [
     slug: "raspberry-pi-resource-monitoring-gui",
     title: "Raspberry Pi Resource-Monitoring GUI",
     category: "Software",
+    image: "/assets/project-images/raspberry-pi.png",
+    imageAlt: "Raspberry Pi single-board computer",
     categories: ["software", "edge-ai"],
     problem:
       "Embedded inference needs visibility into resource use so model behaviour can be interpreted alongside system constraints.",
@@ -191,6 +201,8 @@ export const projects = [
     slug: "event-camera-data-compression",
     title: "Event-Camera Data Compression",
     category: "Neuromorphic",
+    image: "/assets/project-images/cnn-layers.png",
+    imageAlt: "Sparse feature-processing diagram used as a neuromorphic systems visual",
     categories: ["neuromorphic", "software", "edge-ai"],
     problem:
       "Event-based sensors can generate data streams that require efficient representation for analysis and embedded feasibility.",
@@ -207,6 +219,8 @@ export const projects = [
     slug: "transformer-based-vision-experiments",
     title: "Transformer-Based Vision Experiments",
     category: "Computer Vision",
+    image: "/assets/project-images/cnn-layers.png",
+    imageAlt: "Neural-network feature extraction visual",
     categories: ["computer-vision"],
     problem:
       "Different vision architectures need to be compared to understand trade-offs in training, evaluation and deployment readiness.",
@@ -223,6 +237,8 @@ export const projects = [
     slug: "nlp-job-description-classifier",
     title: "NLP Job Description Classifier",
     category: "Software",
+    image: "/assets/project-images/cnn-layers.png",
+    imageAlt: "Neural-network feature extraction visual",
     categories: ["software"],
     problem:
       "Job descriptions can be classified with both classical NLP and modern embedding-based approaches, each with trade-offs.",
@@ -240,6 +256,8 @@ export const projects = [
     slug: "high-altitude-payload-separation-system",
     title: "High-Altitude Payload Separation System",
     category: "Edge AI",
+    image: "/assets/project-images/bme280-breakout.jpg",
+    imageAlt: "BME280 atmospheric sensor breakout board",
     categories: ["edge-ai", "software"],
     problem:
       "High-altitude payload systems need reliable sensing and control logic under practical embedded constraints.",
@@ -256,6 +274,8 @@ export const projects = [
     slug: "biomedical-ppg-pulse-sensor",
     title: "Biomedical PPG Pulse Sensor",
     category: "Engineering",
+    image: "/assets/project-images/pulse-oximetry.png",
+    imageAlt: "Pulse oximetry sensing principle diagram",
     categories: ["software"],
     problem:
       "Biomedical sensing projects require careful signal capture, conditioning and interpretation.",
@@ -272,6 +292,8 @@ export const projects = [
     slug: "bidirectional-dc-dc-converter",
     title: "Bidirectional DC-DC Converter",
     category: "Engineering",
+    image: "/assets/project-images/dc-dc-converter.png",
+    imageAlt: "DC-DC converter circuit diagram",
     categories: ["software"],
     problem:
       "Power electronics systems require careful circuit design, control thinking and validation.",

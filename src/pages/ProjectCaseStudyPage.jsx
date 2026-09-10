@@ -43,6 +43,11 @@ export function ProjectCaseStudyPage({ project }) {
           Projects
         </a>
         <div className="case-hero">
+          {project.image ? (
+            <figure className="case-visual">
+              <img src={project.image} alt={project.imageAlt || `${project.title} project visual`} />
+            </figure>
+          ) : null}
           <p className="eyebrow">Case study</p>
           <h1>{project.title}</h1>
           <p>{study?.overview || project.built}</p>

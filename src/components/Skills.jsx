@@ -12,6 +12,7 @@ export function Skills() {
           {skillGroups.map((group) => (
             <section className="skill-group" key={group.title}>
               <h3>{group.title}</h3>
+              {group.summary ? <p>{group.summary}</p> : null}
               <div className="tag-list">
                 {group.skills.map((skill) => (
                   <span key={skill}>{skill}</span>

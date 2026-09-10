@@ -17,7 +17,7 @@ export function ProjectCard({ project, variant = "card" }) {
   return (
     <article className={`project-card ${variant === "wide" ? "wide" : ""}`}>
       <div className={`project-media project-media-${project.categories[0]}`} aria-hidden="true">
-        {project.image ? <img src={project.image} alt="" /> : <span>{project.category}</span>}
+        {project.image ? <img src={project.image} alt={project.imageAlt || ""} loading="lazy" /> : <span>{project.category}</span>}
       </div>
       <div className="project-content">
         {project.featured ? <p className="featured-label">Featured project</p> : null}

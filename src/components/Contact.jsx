@@ -10,8 +10,8 @@ export function Contact() {
       <div className="section-inner contact-section">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Open to software, ML engineering, research engineering and embedded AI conversations.</h2>
-          <p className="project-note">Public contact links are shown only when real URLs or email details are available.</p>
+          <h2>Open to software engineering, ML engineering, research engineering and edge AI roles.</h2>
+          <p>I am interested in teams building reliable ML systems across audio, computer vision, embedded AI, research tooling and Python backend infrastructure. The best public contact path right now is LinkedIn; GitHub is available for code and project context.</p>
         </div>
         <div className="contact-links">
           {hasPublicEmail ? (
