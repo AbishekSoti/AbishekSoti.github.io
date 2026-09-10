@@ -41,9 +41,27 @@ function isInternalRoute(url) {
   return resolveRoute(url.pathname).Page !== HomePage;
 }
 
+function getInitialTheme() {
+  try {
+    return window.localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [theme, setTheme] = useState(getInitialTheme);
   const { Page, props } = resolveRoute(currentPath);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      window.localStorage.setItem("portfolio-theme", theme);
+    } catch {
+      // Ignore storage failures; the theme still applies for this session.
+    }
+  }, [theme]);
 
   useEffect(() => {
     const handlePopState = () => setCurrentPath(window.location.pathname);
@@ -76,7 +94,7 @@ export default function App() {
 
   return (
     <>
-      <Header currentPath={currentPath} />
+      <Header currentPath={currentPath} theme={theme} onToggleTheme={() => setTheme((value) => (value === "dark" ? "light" : "dark"))} />
       <main>
         <Page {...props} />
       </main>

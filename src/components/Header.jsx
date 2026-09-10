@@ -1,6 +1,7 @@
 import { BookOpen, Github, Linkedin } from "lucide-react";
 import { isRealUrl } from "../data/projects.js";
 import { profile } from "../data/profile.js";
+import { ThemeToggle } from "./ThemeToggle.jsx";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -21,7 +22,7 @@ function ExternalIconLink({ href, label, children }) {
   );
 }
 
-export function Header({ currentPath = "/" }) {
+export function Header({ currentPath = "/", theme = "dark", onToggleTheme }) {
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Go to home page">
@@ -38,16 +39,19 @@ export function Header({ currentPath = "/" }) {
           </a>
         ))}
       </nav>
-      <div className="social-links" aria-label="Social links">
-        <ExternalIconLink href={profile.githubUrl} label="GitHub profile">
-          <Github size={19} />
-        </ExternalIconLink>
-        <ExternalIconLink href={profile.linkedinUrl} label="LinkedIn profile">
-          <Linkedin size={19} />
-        </ExternalIconLink>
-        <ExternalIconLink href={profile.scholarUrl} label="Google Scholar profile">
-          <BookOpen size={19} />
-        </ExternalIconLink>
+      <div className="header-actions">
+        <div className="social-links" aria-label="Social links">
+          <ExternalIconLink href={profile.githubUrl} label="GitHub profile">
+            <Github size={19} />
+          </ExternalIconLink>
+          <ExternalIconLink href={profile.linkedinUrl} label="LinkedIn profile">
+            <Linkedin size={19} />
+          </ExternalIconLink>
+          <ExternalIconLink href={profile.scholarUrl} label="Google Scholar profile">
+            <BookOpen size={19} />
+          </ExternalIconLink>
+        </div>
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </div>
     </header>
   );

@@ -12,7 +12,12 @@ function ExternalButton({ href, className, children }) {
   );
 }
 
-const capabilityItems = ["Python systems", "PyTorch models", "Edge deployment", "Research engineering"];
+const capabilityItems = [
+  "Signal-to-system ML",
+  "Compact deep learning",
+  "Evaluation integrity",
+  "Deployable inference",
+];
 
 export function Hero() {
   return (
@@ -49,16 +54,16 @@ export function Hero() {
         </div>
         <div className="hero-panel" aria-label="Portfolio highlights">
           <div>
-            <span className="metric">Audio</span>
-            <span className="metric-label">Underwater acoustic ML</span>
-          </div>
-          <div>
-            <span className="metric">Vision</span>
-            <span className="metric-label">CNNs and transformers</span>
+            <span className="metric">98%</span>
+            <span className="metric-label">Compact ShipsEar acoustic classifier result</span>
           </div>
           <div>
             <span className="metric">Edge</span>
-            <span className="metric-label">Raspberry Pi inference</span>
+            <span className="metric-label">Raspberry Pi inference and resource-aware deployment</span>
+          </div>
+          <div>
+            <span className="metric">Research</span>
+            <span className="metric-label">Event-camera, acoustic ML and publication-driven engineering</span>
           </div>
         </div>
       </div>

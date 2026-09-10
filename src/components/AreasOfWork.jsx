@@ -9,15 +9,18 @@ export function AreasOfWork() {
       <div className="section-inner">
         <div className="section-heading compact">
           <p className="eyebrow">Areas of work</p>
-          <h2 id="areas-heading">Applied engineering across ML systems.</h2>
+          <h2 id="areas-heading">What the work is really about.</h2>
         </div>
         <div className="areas-grid">
           {profile.areasOfWork.map((area, index) => {
             const Icon = icons[index] || TerminalSquare;
             return (
-              <article className="area-card" key={area}>
+              <article className="area-card" key={area.title}>
                 <Icon size={23} />
-                <h3>{area}</h3>
+                <div>
+                  <h3>{area.title}</h3>
+                  <p>{area.description}</p>
+                </div>
               </article>
             );
           })}

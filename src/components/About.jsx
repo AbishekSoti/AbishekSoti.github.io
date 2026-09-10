@@ -7,20 +7,20 @@ export function About() {
       <div className="section-inner split-section">
         <div>
           <p className="eyebrow">About</p>
-          <h2>Software engineering depth with research-grade ML problems.</h2>
+          <h2>Engineering judgment for models that have to survive reality.</h2>
         </div>
         <div className="body-copy">
           <p>
-            I am a software and machine learning engineer with an electrical
-            engineering background, currently completing an MPhil in Machine
-            Learning / Embedded AI at Western Sydney University. My work spans
-            Python systems, PyTorch, acoustic ML, computer vision, event cameras,
-            neuromorphic sensing and embedded inference.
+            My strongest work sits where noisy physical signals become software
+            decisions. I bring an electrical engineering background into machine
+            learning problems that need more than a model: representation design,
+            evaluation discipline, resource awareness and a path toward deployment.
           </p>
           <p>
-            Research gives me harder problems to engineer around: careful
-            evaluation, reproducible experiments, resource constraints, privacy
-            boundaries and clear technical communication.
+            I am currently completing an MPhil in Machine Learning / Embedded AI
+            at Western Sydney University, using research problems in underwater
+            acoustics, event cameras and embedded inference to build practical
+            engineering depth.
           </p>
           <p className="location">{profile.location}</p>
         </div>

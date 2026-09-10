@@ -7,11 +7,11 @@ export const profile = {
   linkedinUrl: "https://www.linkedin.com/in/abisheksoti",
   scholarUrl: null,
   resumeUrl: "/abishek-soti-resume.pdf",
-  headline: "Building intelligent systems for audio, vision and edge AI.",
+  headline: "Compact intelligence, engineered from signal to system.",
   summary:
-    "I build Python and PyTorch systems across acoustic ML, computer vision, neuromorphic sensing and embedded deployment. My work connects model development with software structure, evaluation, deployment discipline and practical research engineering.",
+    "I turn difficult sensor data into deployable machine-learning systems: acoustic classifiers, computer-vision pipelines, event-camera workflows and edge inference built to be evaluated, trusted and improved.",
   objective:
-    "Build production-ready ML and AI systems: reliable Python services, reproducible training, deployment pipelines, monitoring, and maintainable engineering workflows.",
+    "Create ML systems that combine strong representation design, reliable evaluation, compact deep learning and software discipline so models become usable engineering assets.",
   targetRoles: [
     "Machine Learning Engineer",
     "AI Engineer",
@@ -21,11 +21,26 @@ export const profile = {
     "MLOps Engineer",
   ],
   areasOfWork: [
-    "Audio Intelligence",
-    "Computer Vision",
-    "Neuromorphic Systems",
-    "Edge Deployment",
-    "Python Engineering",
+    {
+      title: "Acoustic Intelligence",
+      description: "Feature-engineered audio ML for vessel classification and signal understanding.",
+    },
+    {
+      title: "Vision Systems",
+      description: "CNN, transformer and deployed computer-vision workflows.",
+    },
+    {
+      title: "Neuromorphic Sensing",
+      description: "Event-camera research tooling for asynchronous visual data.",
+    },
+    {
+      title: "Edge Inference",
+      description: "Raspberry Pi deployment, monitoring and resource-aware model thinking.",
+    },
+    {
+      title: "ML Software",
+      description: "Python systems that make experiments repeatable and deployment-ready.",
+    },
   ],
   credibility: [
     "MPhil research at Western Sydney University",
