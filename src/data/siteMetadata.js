@@ -8,6 +8,11 @@ export const defaultMetadata = {
 
 export const routeMetadata = {
   "/": defaultMetadata,
+  "/about": {
+    title: "About | Abishek Soti",
+    description:
+      "Engineering background and research experience across software, machine learning, signals, sensors and embedded systems.",
+  },
   "/projects": {
     title: "Projects | Abishek Soti",
     description:

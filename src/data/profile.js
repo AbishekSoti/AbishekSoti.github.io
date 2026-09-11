@@ -1,15 +1,15 @@
 export const profile = {
   name: "Abishek Soti",
-  role: "Software Engineer | Machine Learning Engineer | MPhil Researcher",
+  role: "Software Engineer · ML Engineer · MPhil Researcher",
   location: "Sydney, Australia",
   email: null,
   githubUrl: "https://github.com/AbishekSoti",
   linkedinUrl: "https://www.linkedin.com/in/abisheksoti",
   scholarUrl: null,
   resumeUrl: "/abishek-soti-resume.pdf",
-  headline: "Machine learning that holds up beyond the experiment.",
+  headline: "I build software and machine-learning systems for signals, sensors and edge devices.",
   summary:
-    "I engineer acoustic, visual and event-based sensing systems around the things that make a result useful: strong representations, honest evaluation, compact models and a clear path to deployment.",
+    "Electrical engineering is the foundation. My work spans underwater acoustics, event-based vision and embedded inference, from careful evaluation through to deployment.",
   education: [
     {
       degree: "Master of Philosophy - Machine Learning / Embedded AI",

@@ -9,12 +9,14 @@ import {
   siteUrl,
 } from "./data/siteMetadata.js";
 import { ContactPage } from "./pages/ContactPage.jsx";
+import { AboutPage } from "./pages/AboutPage.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
 import { ProjectCaseStudyPage } from "./pages/ProjectCaseStudyPage.jsx";
 import { ProjectsPage } from "./pages/ProjectsPage.jsx";
 
 const routes = {
   "/": HomePage,
+  "/about": AboutPage,
   "/projects": ProjectsPage,
   "/contact": ContactPage,
 };
@@ -98,9 +100,23 @@ export default function App() {
 
       event.preventDefault();
       if (url.pathname !== window.location.pathname) {
-        window.history.pushState({}, "", url.pathname);
+        const destination = url.pathname + url.search + url.hash;
+        const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth";
+
+        window.history.pushState({}, "", destination);
         setCurrentPath(url.pathname);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        if (url.hash) {
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+              document.querySelector(url.hash)?.scrollIntoView({ behavior });
+            });
+          });
+        } else {
+          window.scrollTo({ top: 0, behavior });
+        }
       }
     };
 

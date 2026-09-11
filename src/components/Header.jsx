@@ -1,16 +1,24 @@
-import { BookOpen, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { isRealUrl } from "../data/projects.js";
 import { profile } from "../data/profile.js";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 
 const navItems = [
-  { label: "Contact", href: "/contact" },
+  { label: "Work", href: "/#selected-work", activePath: "/" },
+  { label: "About", href: "/about", activePath: "/about" },
+  { label: "Contact", href: "/contact", activePath: "/contact" },
 ];
 
 function ExternalIconLink({ href, label, children }) {
   if (!isRealUrl(href)) return null;
   return (
-    <a href={href} aria-label={label} target="_blank" rel="noreferrer">
+    <a
+      href={href}
+      aria-label={label}
+      title={label}
+      target="_blank"
+      rel="noreferrer"
+    >
       {children}
     </a>
   );
@@ -28,7 +36,7 @@ export function Header({ currentPath = "/", theme = "dark", onToggleTheme }) {
         aria-label="Primary navigation"
       >
         {navItems.map((item) => {
-          const isActive = currentPath === item.href;
+          const isActive = currentPath === item.activePath;
 
           return (
             <a
@@ -48,9 +56,6 @@ export function Header({ currentPath = "/", theme = "dark", onToggleTheme }) {
           </ExternalIconLink>
           <ExternalIconLink href={profile.linkedinUrl} label="LinkedIn profile">
             <Linkedin size={19} />
-          </ExternalIconLink>
-          <ExternalIconLink href={profile.scholarUrl} label="Google Scholar profile">
-            <BookOpen size={19} />
           </ExternalIconLink>
         </div>
         <ThemeToggle theme={theme} onToggle={onToggleTheme} />
