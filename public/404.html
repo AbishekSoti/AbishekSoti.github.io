@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#111315" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Page Not Found | Abishek Soti</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, ui-sans-serif,
+          system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        background: #111315;
+        color: #f1f0ec;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header {
+        display: flex;
+        min-height: 70px;
+        align-items: center;
+        padding: 14px clamp(18px, 5vw, 72px);
+      }
+
+      header a {
+        font-size: 1.02rem;
+        font-weight: 820;
+      }
+
+      main {
+        display: grid;
+        min-height: calc(100vh - 70px);
+        place-items: center;
+        padding: 56px 18px;
+      }
+
+      section {
+        width: min(720px, 100%);
+      }
+
+      .code {
+        margin: 0 0 18px;
+        color: #c0cdd5;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 680px;
+        margin: 0;
+        font-size: clamp(2.7rem, 8vw, 5.4rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 590px;
+        margin: 24px 0 0;
+        color: #aaa7a0;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        margin-top: 32px;
+      }
+
+      nav a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 17px;
+        border: 0;
+        border-radius: 6px;
+        background: #1d2124;
+        font-weight: 760;
+      }
+
+      nav a:first-child {
+        background: #8299a9;
+        color: #101315;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        background: #29333a;
+      }
+
+      nav a:focus-visible,
+      header a:focus-visible {
+        outline: 3px solid rgba(130, 153, 169, 0.42);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 520px) {
+        header {
+          min-height: 62px;
+          padding: 11px 16px;
+        }
+
+        main {
+          min-height: calc(100vh - 62px);
+        }
+
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/" aria-label="Go to Abishek Soti's home page">Abishek Soti</a>
+    </header>
+    <main>
+      <section aria-labelledby="not-found-heading">
+        <p class="code">404 / Page not found</p>
+        <h1 id="not-found-heading">Nothing is deployed at this address.</h1>
+        <p>
+          The page may have moved, or the link may be incomplete. Return to the
+          portfolio or continue directly to the engineering work.
+        </p>
+        <nav aria-label="Recovery links">
+          <a href="/">Return home</a>
+          <a href="/projects">Browse projects</a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

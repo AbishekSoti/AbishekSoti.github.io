@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2026-09-10T23:12:15.281Z",
+  "items": [
+    {
+      "id": "hugging-face",
+      "source": "Hugging Face Papers",
+      "topic": "Machine-learning research",
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "description": "This survey examines inference-efficiency techniques for video large language models, analyzing cost reductions across frame sampling, encoding, token compression, and language model stages...",
+      "href": "https://huggingface.co/papers/2609.10355",
+      "publishedAt": "2026-09-10"
+    },
+    {
+      "id": "pytorch",
+      "source": "PyTorch Blog",
+      "topic": "ML systems practice",
+      "title": "PyTorch 2.14 Release Blog",
+      "description": "We are excited to announce the release of PyTorch® 2.14 (release notes)! The PyTorch 2.14 release features the following changes: NVGEMM brings CuTeDSL-generated CUTLASS kernels to Inductor,...",
+      "href": "https://pytorch.org/blog/pytorch-2-14-release-blog/",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "github",
+      "source": "GitHub Blog",
+      "topic": "Software engineering",
+      "title": "How we make AI coding more cost efficient without sacrificing task quality",
+      "description": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task...",
+      "href": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+      "publishedAt": "2026-09-02"
+    },
+    {
+      "id": "arxiv",
+      "source": "arXiv eess.AS",
+      "topic": "Audio and acoustics",
+      "title": "SCNet: Enhancing GAN-based Speech Generation with Subband Condition Network and Magnitude-aware Phase Loss",
+      "description": "Recent speech generation has been predominantly driven by GAN-based networks aimed at high-quality waveform synthesis from mel-spectrograms. However, these methods often operate as black-box...",
+      "href": "https://arxiv.org/abs/2609.10025",
+      "publishedAt": "2026-09-10"
+    }
+  ]
+}

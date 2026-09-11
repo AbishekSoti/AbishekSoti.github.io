@@ -38,7 +38,7 @@ export const projects = [
       statement: "A compact model can be the stronger engineering choice.",
       summary:
         "Built an end-to-end acoustic classification workflow around representation design, careful evaluation and an efficiency-first model choice.",
-      proof: ["About 98% accuracy", "Compact 2-layer CNN", "Deployment-aware design"],
+      proof: ["Approximately 99.1% accuracy", "Compact two-layer CNN", "Deployment-aware design"],
     },
     problem:
       "Underwater acoustic classification needs reliable models that distinguish vessel signatures while remaining efficient enough for realistic deployment constraints.",
@@ -47,7 +47,7 @@ export const projects = [
     contribution:
       "Owned the practical ML workflow: preprocessing, acoustic representation experiments, model comparison, benchmark evaluation and result interpretation.",
     outcome:
-      "Achieved about 98% classification accuracy on ShipsEar with a compact 2-layer CNN, showing that targeted acoustic tasks do not always require very large backbones.",
+      "Achieved approximately 99.1% classification accuracy on ShipsEar with a compact two-layer CNN, showing that targeted acoustic tasks do not always require very large backbones.",
     tags: ["Python", "PyTorch", "ShipsEar", "STFT", "CNNs", "Transformers", "Classical ML", "Evaluation"],
     links: {
       demo: null,
@@ -65,7 +65,7 @@ export const projects = [
       architecture:
         "Audio input -> preprocessing and features -> model comparison -> evaluation -> deployment-readiness review.",
       results:
-        "Verified public result: about 98% ShipsEar classification accuracy using a compact 2-layer CNN, presented as evidence that targeted acoustic classifiers can be accurate without oversized backbones when the representation and evaluation workflow are carefully designed.",
+        "Verified public result: approximately 99.1% ShipsEar classification accuracy using a compact two-layer CNN, presented as evidence that targeted acoustic classifiers can be accurate without oversized backbones when the representation and evaluation workflow are carefully designed.",
       decisions: [
         "Prioritised compact model design for targeted acoustic classification.",
         "Framed accuracy together with efficiency and deployment practicality.",

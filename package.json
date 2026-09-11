@@ -7,16 +7,22 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postbuild": "node scripts/copy-static-routes.mjs"
+    "postbuild": "node scripts/copy-static-routes.mjs",
+    "radar:update": "node scripts/update-research-radar.mjs",
+    "security:check": "node scripts/check-public-safety.mjs",
+    "check": "npm run security:check && npm run build"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "three": "^0.186.0"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
-    "vite": "^7.1.0"
+    "@vitejs/plugin-react": "^6.1.1",
+    "fast-xml-parser": "^5.11.1",
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

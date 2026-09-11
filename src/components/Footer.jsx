@@ -19,8 +19,8 @@ export function Footer() {
           LinkedIn
           <ArrowUpRight size={14} />
         </a>
-        <a href={profile.resumeUrl} download>
-          Resume
+        <a href="/contact">
+          Contact &amp; resume
         </a>
       </div>
     </footer>

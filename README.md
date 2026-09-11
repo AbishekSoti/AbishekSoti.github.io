@@ -2,54 +2,57 @@
 
 Public portfolio for [abisheksoti.github.io](https://abisheksoti.github.io).
 
-This site presents Abishek Soti as a Software Engineer and Machine Learning Engineer working across audio machine learning, computer vision, neuromorphic sensing, edge AI, Python engineering, model deployment and research engineering.
+Abishek Soti is a Software Engineer and Machine Learning Engineer working across acoustic ML, computer vision, neuromorphic sensing, embedded inference and research engineering.
 
-## Tech Stack
+## Stack
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Three.js
+- React 19 and Vite
+- JavaScript and CSS
 - GitHub Pages
 - GitHub Actions
 
-## Site Structure
+## Routes
 
-- `/` - Home
-- `/about` - Background, education and research experience
-- `/projects` - Filterable project portfolio
-- `/skills` - Technical toolkit
-- `/engineering` - Production engineering focus
-- `/resume` - Resume download
-- `/contact` - Public contact links
+- `/` - Selected work and current reading
+- `/projects` - Filterable engineering portfolio
+- `/contact` - Public contact links and embedded resume
 - `/projects/:slug` - Project case studies
 
+The fuller About, Approach and Capabilities pages remain in source but are intentionally excluded from public navigation and builds for now.
+
 ## Local Development
+
+Requires Node.js 22.12 or newer.
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production Build
+## Verification
 
 ```bash
-npm run build
+npm run check
 ```
 
-The build outputs to `dist/`. The `postbuild` script copies `dist/index.html` to `dist/404.html` so direct route refreshes work on GitHub Pages.
+This runs the public-safety scan and production build. The generated site is written to `dist/`, including static route entry points and a custom `404.html` for GitHub Pages.
 
 ## Deployment
 
-Deployment is handled by GitHub Actions in `.github/workflows/deploy.yml`.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which audits dependencies, checks the repository for likely secrets and private artifacts, builds the site and deploys it to GitHub Pages.
 
-The selected hosting platform is GitHub Pages:
+## Research Radar
 
-[https://abisheksoti.github.io](https://abisheksoti.github.io)
+`.github/workflows/update-radar.yml` refreshes `src/data/radar.generated.json` weekly from public Hugging Face, PyTorch, GitHub Blog and arXiv feeds. It does not use external API keys. Its short-lived GitHub Actions token is limited to committing the generated JSON and is never included in the browser build.
+
+Run the updater locally with:
+
+```bash
+npm run radar:update
+```
 
 ## Public Safety
 
-This repository is intended to be public. Do not commit secrets, credentials, private datasets, model checkpoints, local file paths, private contact information or unpublished research details.
+Do not commit credentials, private datasets, model checkpoints, private contact information, local paths or unpublished research material. Values prefixed with `VITE_` are public after build and must never contain secrets. See [SECURITY.md](SECURITY.md) for the repository policy.
 
-Project links are rendered only when real public URLs exist in `src/data/projects.js`.
+Project links render only when real public URLs exist in `src/data/projects.js`.

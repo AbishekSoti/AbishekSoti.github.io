@@ -2,22 +2,20 @@ import { useEffect, useState } from "react";
 import { Footer } from "./components/Footer.jsx";
 import { Header } from "./components/Header.jsx";
 import { getProjectBySlug } from "./data/projects.js";
-import { AboutPage } from "./pages/AboutPage.jsx";
+import {
+  defaultMetadata,
+  getProjectMetadata,
+  routeMetadata,
+  siteUrl,
+} from "./data/siteMetadata.js";
 import { ContactPage } from "./pages/ContactPage.jsx";
-import { EngineeringPage } from "./pages/EngineeringPage.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
 import { ProjectCaseStudyPage } from "./pages/ProjectCaseStudyPage.jsx";
 import { ProjectsPage } from "./pages/ProjectsPage.jsx";
-import { ResumePage } from "./pages/ResumePage.jsx";
-import { SkillsPage } from "./pages/SkillsPage.jsx";
 
 const routes = {
   "/": HomePage,
-  "/about": AboutPage,
   "/projects": ProjectsPage,
-  "/skills": SkillsPage,
-  "/engineering": EngineeringPage,
-  "/resume": ResumePage,
   "/contact": ContactPage,
 };
 
@@ -49,10 +47,18 @@ function getInitialTheme() {
   }
 }
 
+function setMetaContent(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.setAttribute("content", value);
+}
+
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [theme, setTheme] = useState(getInitialTheme);
   const { Page, props } = resolveRoute(currentPath);
+  const metadata = props.project
+    ? getProjectMetadata(props.project)
+    : routeMetadata[currentPath] ?? defaultMetadata;
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -62,6 +68,20 @@ export default function App() {
       // Ignore storage failures; the theme still applies for this session.
     }
   }, [theme]);
+
+  useEffect(() => {
+    const url = new URL(currentPath, siteUrl).href;
+    document.title = metadata.title;
+    setMetaContent('meta[name="description"]', metadata.description);
+    setMetaContent('meta[property="og:title"]', metadata.title);
+    setMetaContent('meta[property="og:description"]', metadata.description);
+    setMetaContent('meta[property="og:url"]', url);
+    setMetaContent('meta[name="twitter:title"]', metadata.title);
+    setMetaContent('meta[name="twitter:description"]', metadata.description);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute("href", url);
+  }, [currentPath, metadata.description, metadata.title]);
 
   useEffect(() => {
     const handlePopState = () => setCurrentPath(window.location.pathname);
@@ -94,7 +114,13 @@ export default function App() {
 
   return (
     <>
-      <Header currentPath={currentPath} theme={theme} onToggleTheme={() => setTheme((value) => (value === "dark" ? "light" : "dark"))} />
+      <Header
+        currentPath={currentPath}
+        theme={theme}
+        onToggleTheme={() =>
+          setTheme((value) => (value === "dark" ? "light" : "dark"))
+        }
+      />
       <main>
         <Page {...props} />
       </main>

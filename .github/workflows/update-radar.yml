@@ -1,0 +1,65 @@
+name: Refresh public research radar
+
+on:
+  schedule:
+    - cron: "17 21 * * 0"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: research-radar
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh from public feeds
+        run: npm run radar:update
+
+      - name: Check public repository safety
+        run: npm run security:check
+
+      - name: Commit generated update
+        id: commit
+        shell: bash
+        run: |
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+
+          if git diff --quiet -- src/data/radar.generated.json; then
+            echo "Research radar is already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/radar.generated.json
+          git commit -m "Update public research radar"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Push generated update
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh auth setup-git
+          git push origin main

@@ -1,6 +1,11 @@
 node_modules/
 dist/
 .DS_Store
+.aws/
+.ssh/
+.npmrc
+.envrc
+.secrets*
 .env
 .env.local
 npm-debug.log*
@@ -35,4 +40,10 @@ mlruns/
 .mypy_cache/
 .ruff_cache/
 .ipynb_checkpoints/
+*.db
+*.jks
+*.keystore
+*.sqlite
+*.tfstate*
+*.tfvars
 AGENTS.md
