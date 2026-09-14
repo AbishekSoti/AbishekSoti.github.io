@@ -5,8 +5,6 @@ import { ProjectVisual } from "./ProjectVisual.jsx";
 const previewProjects = getFeaturedProjects();
 
 export function ProjectsPreview() {
-  const [leadProject, ...supportingProjects] = previewProjects;
-
   return (
     <section className="section-band work-band" id="selected-work">
       <div className="section-inner">
@@ -15,53 +13,43 @@ export function ProjectsPreview() {
             <p className="eyebrow">Selected engineering work</p>
             <h2>Systems built around real constraints.</h2>
           </div>
-          <a className="button ghost" href="/projects">
+          <a className="text-link" href="/projects">
             All projects
             <ArrowRight size={18} />
           </a>
         </div>
-        <div className="work-showcase">
-          <a className="work-feature" href={"/projects/" + leadProject.slug}>
-            <div className="work-feature-media">
-              <ProjectVisual project={leadProject} />
-              <span className="work-number">01</span>
-            </div>
-            <div className="work-feature-copy">
-              <p className="project-category">{leadProject.category}</p>
-              <h3>{leadProject.title}</h3>
-              <p className="work-statement">{leadProject.homepage.statement}</p>
-              <p className="work-summary">{leadProject.homepage.summary}</p>
-              <div className="work-facts" aria-label="Project highlights">
-                {leadProject.homepage.proof.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
+        <div className="work-index">
+          {previewProjects.map((project, index) => (
+            <a
+              className="work-entry"
+              href={"/projects/" + project.slug}
+              key={project.slug}
+            >
+              <div className="work-entry-media">
+                <ProjectVisual project={project} />
               </div>
-              <span className="work-link">
-                Read case study
-                <ArrowUpRight size={18} />
-              </span>
-            </div>
-          </a>
-          <div className="work-teasers">
-            {supportingProjects.map((project, index) => (
-              <a className="work-teaser" href={"/projects/" + project.slug} key={project.slug}>
-                <div className="work-teaser-media">
-                  <ProjectVisual project={project} />
-                  <span className="work-number">0{index + 2}</span>
+              <div className="work-entry-copy">
+                <div className="work-entry-meta">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span>{project.category}</span>
                 </div>
-                <div className="work-teaser-copy">
-                  <p className="project-category">{project.category}</p>
-                  <h3>{project.title}</h3>
-                  <p className="work-statement">{project.homepage.statement}</p>
-                  <p>{project.homepage.summary}</p>
-                  <span className="work-link" aria-hidden="true">
-                    Explore project
-                    <ArrowUpRight size={18} />
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
+                <h3>{project.title}</h3>
+                <p className="work-statement">{project.homepage.statement}</p>
+                <p className="work-summary">{project.homepage.summary}</p>
+                {project.homepage.proof ? (
+                  <div className="work-facts" aria-label="Project highlights">
+                    {project.homepage.proof.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                ) : null}
+                <span className="work-link" aria-hidden="true">
+                  View case study
+                  <ArrowUpRight size={18} />
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>

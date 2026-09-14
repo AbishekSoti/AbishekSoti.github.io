@@ -87,7 +87,10 @@ export function Hero() {
                   onFocus={() => setActiveId(item.id)}
                   onKeyDown={(event) => handleTabKeyDown(event, index)}
                 >
-                  {item.label}
+                  <span className="hero-sampler-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{item.label}</span>
                 </button>
               );
             })}
@@ -125,6 +128,9 @@ export function Hero() {
                       <span>
                         <span className="hero-sampler-domain">{item.label}</span>
                         <strong>{project.title}</strong>
+                        <span className="hero-sampler-statement">
+                          {project.homepage?.statement ?? project.outcome}
+                        </span>
                       </span>
                       <ArrowUpRight size={19} aria-hidden="true" />
                     </span>

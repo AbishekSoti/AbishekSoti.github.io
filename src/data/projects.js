@@ -236,6 +236,11 @@ export const projects = [
     image: "/assets/project-images/raspberry-pi.png",
     imageAlt: "Raspberry Pi single-board computer",
     categories: ["edge-ai", "software"],
+    homepage: {
+      statement: "Inference has to work on the device, not only in the notebook.",
+      summary:
+        "Deployed an inference-oriented ML workflow on Raspberry Pi Linux and evaluated it against practical device constraints.",
+    },
     problem:
       "ML models need to be tested against real device constraints before they can be taken seriously for embedded AI use cases.",
     built:
