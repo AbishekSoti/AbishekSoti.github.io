@@ -27,7 +27,7 @@ export function ResearchRadar() {
     >
       <div className="section-inner radar-layout">
         <header className="radar-intro">
-          <p className="eyebrow">Reading &amp; ideas</p>
+          <p className="eyebrow">Research radar</p>
           <h2 id="research-radar-heading">Worth a closer look.</h2>
           <p>
             Recent engineering and research releases from sources I follow across

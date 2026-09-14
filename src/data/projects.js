@@ -381,6 +381,33 @@ export const projects = [
   },
 ];
 
+export const currentWork = [
+  {
+    id: "underwater-sound-source-classification",
+    status: "Research in progress",
+    title: "Underwater Sound Source Classification",
+    statement:
+      "Developing efficient acoustic classifiers that turn spectro-temporal structure into reliable source decisions.",
+    update:
+      "This work extends the ShipsEar study through compact architectures, representation design and disciplined evaluation. Publication-sensitive methods remain private.",
+    areas: ["Acoustic ML", "Signal Processing", "Compact Models"],
+    href: "/projects/underwater-acoustic-vessel-classification",
+    linkLabel: "See the established ShipsEar result",
+  },
+  {
+    id: "knowledge-distillation",
+    status: "Active model research",
+    title: "Knowledge Distillation for Efficient Inference",
+    statement:
+      "Investigating how capable teacher models can guide smaller networks built for deployment-constrained systems.",
+    update:
+      "Current work examines distillation objectives, student architecture choices and the trade-off between predictive quality and inference cost.",
+    areas: ["Knowledge Distillation", "Deep Learning", "Efficient Inference"],
+    href: null,
+    linkLabel: null,
+  },
+];
+
 export function getFeaturedProjects() {
   return projects
     .filter((project) => project.featured)

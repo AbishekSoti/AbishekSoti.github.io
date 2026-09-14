@@ -13,7 +13,7 @@ Abishek Soti is a Software Engineer and Machine Learning Engineer working across
 
 ## Routes
 
-- `/` - Selected work and current reading
+- `/` - Current work, completed case studies, reading shelf and research radar
 - `/projects` - Filterable engineering portfolio
 - `/contact` - Public contact links and embedded resume
 - `/projects/:slug` - Project case studies
@@ -56,3 +56,5 @@ npm run radar:update
 Do not commit credentials, private datasets, model checkpoints, private contact information, local paths or unpublished research material. Values prefixed with `VITE_` are public after build and must never contain secrets. See [SECURITY.md](SECURITY.md) for the repository policy.
 
 Project links render only when real public URLs exist in `src/data/projects.js`.
+Current work is maintained in `src/data/projects.js`; books and reading links are
+maintained in `src/data/reading.js`.

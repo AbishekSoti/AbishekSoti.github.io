@@ -4,7 +4,7 @@ import { profile } from "../data/profile.js";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 
 const navItems = [
-  { label: "Work", href: "/#selected-work", activePath: "/" },
+  { label: "Work", href: "/#current-work", activePath: "/" },
   { label: "About", href: "/about", activePath: "/about" },
   { label: "Contact", href: "/contact", activePath: "/contact" },
 ];

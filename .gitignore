@@ -47,3 +47,6 @@ mlruns/
 *.tfstate*
 *.tfvars
 AGENTS.md
+
+# Keep the original portrait local; the public copy has metadata removed.
+/Me_2026.jpg

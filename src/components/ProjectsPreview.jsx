@@ -10,7 +10,7 @@ export function ProjectsPreview() {
       <div className="section-inner">
         <div className="showcase-heading">
           <div>
-            <p className="eyebrow">Selected engineering work</p>
+            <p className="eyebrow">Selected completed work</p>
             <h2>Systems built around real constraints.</h2>
           </div>
           <a className="text-link" href="/projects">
