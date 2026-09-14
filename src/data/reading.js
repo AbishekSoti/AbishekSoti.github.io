@@ -6,7 +6,7 @@ export const currentlyReading = [
     detail: "Four novels and 56 short stories",
     note:
       "Reading the complete canon as a long study in observation, inference and precise storytelling.",
-    href: "https://standardebooks.org/collections/sherlock-holmes",
+    href: "https://sherlock-holm.es/",
   },
   {
     id: "a-tour-of-cpp",
