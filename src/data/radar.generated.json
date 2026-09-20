@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-09-10T23:12:15.281Z",
+  "updatedAt": "2026-09-20T23:15:51.773Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
-      "description": "This survey examines inference-efficiency techniques for video large language models, analyzing cost reductions across frame sampling, encoding, token compression, and language model stages...",
-      "href": "https://huggingface.co/papers/2609.10355",
-      "publishedAt": "2026-09-10"
+      "title": "Reflect, Revise, Reuse: Training-Free Skill Evolution for GUI Agents",
+      "description": "GUI agents execute long-horizon tasks on dynamic graphical user interfaces, where pop-ups, delayed loads, and relocated widgets routinely invalidate plans fixed before execution. Recent...",
+      "href": "https://huggingface.co/papers/2609.17653",
+      "publishedAt": "2026-09-18"
     },
     {
       "id": "pytorch",
