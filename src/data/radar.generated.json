@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-20T23:15:51.773Z",
+  "updatedAt": "2026-09-27T23:48:29.272Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "Reflect, Revise, Reuse: Training-Free Skill Evolution for GUI Agents",
-      "description": "GUI agents execute long-horizon tasks on dynamic graphical user interfaces, where pop-ups, delayed loads, and relocated widgets routinely invalidate plans fixed before execution. Recent...",
-      "href": "https://huggingface.co/papers/2609.17653",
-      "publishedAt": "2026-09-18"
+      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
+      "description": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents. In particular, it is still...",
+      "href": "https://huggingface.co/papers/2609.23407",
+      "publishedAt": "2026-09-25"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "PyTorch 2.14 Release Blog",
-      "description": "We are excited to announce the release of PyTorch® 2.14 (release notes)! The PyTorch 2.14 release features the following changes: NVGEMM brings CuTeDSL-generated CUTLASS kernels to Inductor,...",
-      "href": "https://pytorch.org/blog/pytorch-2-14-release-blog/",
-      "publishedAt": "2026-09-02"
+      "title": "From Research Project to Open Source Ecosystem: Bring Your Academic PyTorch Project to PyTorchCon NA",
+      "description": "Some of the most interesting work being built with PyTorch starts in universities, research labs, student groups, and academic institutions. A new model architecture. A library created to...",
+      "href": "https://pytorch.org/blog/from-research-project-to-open-source-ecosystem-bring-your-academic-pytorch-project-to-pytorchcon-na/",
+      "publishedAt": "2026-09-23"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "How we make AI coding more cost efficient without sacrificing task quality",
-      "description": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task...",
-      "href": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
-      "publishedAt": "2026-09-02"
+      "title": "Developers want more efficient software. Here’s what over 1,000 GitHub users told us they need.",
+      "description": "New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute....",
+      "href": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+      "publishedAt": "2026-09-23"
     },
     {
       "id": "arxiv",
