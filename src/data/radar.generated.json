@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-27T23:48:29.272Z",
+  "updatedAt": "2026-10-04T23:57:46.605Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "OmniEcho: Spatial Audio Understanding for Embodied Agents",
-      "description": "Humans can effortlessly localize the direction of a sound source and integrate it with visual cues for reasoning, yet this remains challenging for embodied agents. In particular, it is still...",
-      "href": "https://huggingface.co/papers/2609.23407",
-      "publishedAt": "2026-09-25"
+      "title": "Video Generation Models: A Survey of Post-Training and Alignment",
+      "description": "Video generation has rapidly progressed from short, low-quality clips to high-resolution, long-duration sequences with complex spatiotemporal dynamics. Despite strong generative priors...",
+      "href": "https://huggingface.co/papers/2610.00812",
+      "publishedAt": "2026-10-02"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "From Research Project to Open Source Ecosystem: Bring Your Academic PyTorch Project to PyTorchCon NA",
-      "description": "Some of the most interesting work being built with PyTorch starts in universities, research labs, student groups, and academic institutions. A new model architecture. A library created to...",
-      "href": "https://pytorch.org/blog/from-research-project-to-open-source-ecosystem-bring-your-academic-pytorch-project-to-pytorchcon-na/",
-      "publishedAt": "2026-09-23"
+      "title": "Building a High-Performance and Portable vLLM Linear Backend with Helion",
+      "description": "TL;DR We integrated Helion into vLLM’s linear backend to explore how an autotuned, high-level kernel DSL can improve LLM inference performance while reducing kernel implementation...",
+      "href": "https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/",
+      "publishedAt": "2026-10-02"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "Developers want more efficient software. Here’s what over 1,000 GitHub users told us they need.",
-      "description": "New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute....",
-      "href": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-      "publishedAt": "2026-09-23"
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "description": "Learn to direct AI agents, critically review their output, and keep technical judgment at the center of your workflow. The post AI is changing developer work. Here are three skills to...",
+      "href": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+      "publishedAt": "2026-10-02"
     },
     {
       "id": "arxiv",
