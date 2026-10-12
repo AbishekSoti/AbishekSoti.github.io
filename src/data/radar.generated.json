@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-10-04T23:57:46.605Z",
+  "updatedAt": "2026-10-12T00:33:41.219Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "Video Generation Models: A Survey of Post-Training and Alignment",
-      "description": "Video generation has rapidly progressed from short, low-quality clips to high-resolution, long-duration sequences with complex spatiotemporal dynamics. Despite strong generative priors...",
-      "href": "https://huggingface.co/papers/2610.00812",
-      "publishedAt": "2026-10-02"
+      "title": "Frozen Models, Evolving Expertise: Model-Agnostic Learning from Deployment Experience for Multimodal Medical...",
+      "description": "Large language models (LLMs) and vision-language models (VLMs) are usually frozen after deployment, so they do not learn from the cases they solve. This is especially concerning in medicine,...",
+      "href": "https://huggingface.co/papers/2610.09146",
+      "publishedAt": "2026-10-09"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "Building a High-Performance and Portable vLLM Linear Backend with Helion",
-      "description": "TL;DR We integrated Helion into vLLM’s linear backend to explore how an autotuned, high-level kernel DSL can improve LLM inference performance while reducing kernel implementation...",
-      "href": "https://pytorch.org/blog/building-a-high-performance-and-portable-vllm-linear-backend-with-helion/",
-      "publishedAt": "2026-10-02"
+      "title": "Evolution of the PyTorch Media Processing Landscape",
+      "description": "TL;DR If you need to decode or encode media, whether it&#8217;s images, video, or audio, use TorchCodec. If you need to transform media, use TorchVision for images and video, and... The post...",
+      "href": "https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape/",
+      "publishedAt": "2026-10-05"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "AI is changing developer work. Here are three skills to strengthen.",
-      "description": "Learn to direct AI agents, critically review their output, and keep technical judgment at the center of your workflow. The post AI is changing developer work. Here are three skills to...",
-      "href": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
-      "publishedAt": "2026-10-02"
+      "title": "Hack the World: Why hackathons are still the best place to learn to build",
+      "description": "The barriers to building software have collapsed. Today, anyone can build. Hackathons are a great place to start learning. The post Hack the World: Why hackathons are still the best place to...",
+      "href": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
+      "publishedAt": "2026-10-09"
     },
     {
       "id": "arxiv",
