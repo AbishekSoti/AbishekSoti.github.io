@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-12T00:33:41.219Z",
+  "updatedAt": "2026-10-18T23:14:10.649Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "Frozen Models, Evolving Expertise: Model-Agnostic Learning from Deployment Experience for Multimodal Medical...",
-      "description": "Large language models (LLMs) and vision-language models (VLMs) are usually frozen after deployment, so they do not learn from the cases they solve. This is especially concerning in medicine,...",
-      "href": "https://huggingface.co/papers/2610.09146",
-      "publishedAt": "2026-10-09"
+      "title": "SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models",
+      "description": "SimForcing improves action-conditioned robot world models by distilling motion knowledge from simulation and using controllable simulation conditioning to generate realistic videos across...",
+      "href": "https://huggingface.co/papers/2610.06598",
+      "publishedAt": "2026-10-16"
     },
     {
       "id": "pytorch",
@@ -23,10 +23,10 @@
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "Hack the World: Why hackathons are still the best place to learn to build",
-      "description": "The barriers to building software have collapsed. Today, anyone can build. Hackathons are a great place to start learning. The post Hack the World: Why hackathons are still the best place to...",
-      "href": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
-      "publishedAt": "2026-10-09"
+      "title": "The next developer interface is ambient intelligence",
+      "description": "AI, agents, voice, and physical controls are shifting software development from operating tools to expressing intent—and helping developers stay focused on building. The post The next...",
+      "href": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+      "publishedAt": "2026-10-15"
     },
     {
       "id": "arxiv",
