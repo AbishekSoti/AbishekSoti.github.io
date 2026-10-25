@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-10-18T23:14:10.649Z",
+  "updatedAt": "2026-10-25T23:17:17.991Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "SimForcing: Distilling Simulation Motion Priors into Real-Domain Robot World Models",
-      "description": "SimForcing improves action-conditioned robot world models by distilling motion knowledge from simulation and using controllable simulation conditioning to generate realistic videos across...",
-      "href": "https://huggingface.co/papers/2610.06598",
-      "publishedAt": "2026-10-16"
+      "title": "MambaAct: Efficient Mamba Action Experts for Flow-Matching Vision-Language-Action Models",
+      "description": "MambaAct replaces the transformer action expert in flow-matching VLA policies with a compact Mamba-based expert and a context compressor to cut inference latency while improving robotic...",
+      "href": "https://huggingface.co/papers/2610.22951",
+      "publishedAt": "2026-10-23"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "Evolution of the PyTorch Media Processing Landscape",
-      "description": "TL;DR If you need to decode or encode media, whether it&#8217;s images, video, or audio, use TorchCodec. If you need to transform media, use TorchVision for images and video, and... The post...",
-      "href": "https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape/",
-      "publishedAt": "2026-10-05"
+      "title": "TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL",
+      "description": "TorchTitan is a PyTorch-native platform for rapid experimentation and large-scale pre- and post-training of generative AI models. It is designed as a minimal, clean-room implementation of...",
+      "href": "https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/",
+      "publishedAt": "2026-10-21"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "The next developer interface is ambient intelligence",
-      "description": "AI, agents, voice, and physical controls are shifting software development from operating tools to expressing intent—and helping developers stay focused on building. The post The next...",
-      "href": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
-      "publishedAt": "2026-10-15"
+      "title": "How bug bounty sharpens one researcher’s security skills",
+      "description": "As Cybersecurity Awareness Month continues, the GitHub Bug Bounty team spotlights @r31n, diving into their research approach, favorite bug classes, and advice for aspiring hackers. The post...",
+      "href": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+      "publishedAt": "2026-10-22"
     },
     {
       "id": "arxiv",
