@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-10-25T23:17:17.991Z",
+  "updatedAt": "2026-11-02T00:46:04.724Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "MambaAct: Efficient Mamba Action Experts for Flow-Matching Vision-Language-Action Models",
-      "description": "MambaAct replaces the transformer action expert in flow-matching VLA policies with a compact Mamba-based expert and a context compressor to cut inference latency while improving robotic...",
-      "href": "https://huggingface.co/papers/2610.22951",
-      "publishedAt": "2026-10-23"
+      "title": "Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps",
+      "description": "An online reinforcement learning framework trains UI navigation agents on live mobile apps using a planning agent, UI grounding model, and a novel neighbor-conditioned value estimation...",
+      "href": "https://huggingface.co/papers/2610.39264",
+      "publishedAt": "2026-10-30"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "TorchTitan Update: New SOTA Models, Performance at Scale, TitanRL",
-      "description": "TorchTitan is a PyTorch-native platform for rapid experimentation and large-scale pre- and post-training of generative AI models. It is designed as a minimal, clean-room implementation of...",
-      "href": "https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/",
-      "publishedAt": "2026-10-21"
+      "title": "Optimizing Streaming Speech Recognition on Arm® Edge Devices with ExecuTorch",
+      "description": "When you’re speaking to a device, you expect text to appear as you talk. That makes streaming automatic speech recognition (ASR) a different challenge from batch transcription, where the...",
+      "href": "https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/",
+      "publishedAt": "2026-10-26"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "How bug bounty sharpens one researcher’s security skills",
-      "description": "As Cybersecurity Awareness Month continues, the GitHub Bug Bounty team spotlights @r31n, diving into their research approach, favorite bug classes, and advice for aspiring hackers. The post...",
-      "href": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
-      "publishedAt": "2026-10-22"
+      "title": "GitHub Universe 2026: Evolving every layer of the stack",
+      "description": "Today, we laid out our vision for GitHub as the most comprehensive, end-to-end software delivery system in the world. The post GitHub Universe 2026: Evolving every layer of the stack...",
+      "href": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
+      "publishedAt": "2026-10-28"
     },
     {
       "id": "arxiv",
