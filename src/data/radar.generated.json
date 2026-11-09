@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-02T00:46:04.724Z",
+  "updatedAt": "2026-11-09T00:55:27.230Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "Online Dense Reinforcement Learning with Planning-Grounding Agent for UI Navigation on Live IOS Apps",
-      "description": "An online reinforcement learning framework trains UI navigation agents on live mobile apps using a planning agent, UI grounding model, and a novel neighbor-conditioned value estimation...",
-      "href": "https://huggingface.co/papers/2610.39264",
-      "publishedAt": "2026-10-30"
+      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
+      "description": "Prefill-to-Autoregressive Cross-model Transfer (PACT), a form of latent communication between language models, combines a larger model's prompt representations with a smaller model's...",
+      "href": "https://huggingface.co/papers/2611.06976",
+      "publishedAt": "2026-11-06"
     },
     {
       "id": "pytorch",
