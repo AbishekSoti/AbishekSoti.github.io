@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-11-09T00:55:27.230Z",
+  "updatedAt": "2026-11-16T01:03:49.203Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "On the Opportunities and Challenges of Prefill-to-Autoregressive Cross-Model Transfer",
-      "description": "Prefill-to-Autoregressive Cross-model Transfer (PACT), a form of latent communication between language models, combines a larger model's prompt representations with a smaller model's...",
-      "href": "https://huggingface.co/papers/2611.06976",
-      "publishedAt": "2026-11-06"
+      "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
+      "description": "PhysLoop leverages large language models to guide video generation, selection, and correction, enabling physically consistent self-improvement and controllable data construction for video...",
+      "href": "https://huggingface.co/papers/2611.16748",
+      "publishedAt": "2026-11-13"
     },
     {
       "id": "pytorch",
