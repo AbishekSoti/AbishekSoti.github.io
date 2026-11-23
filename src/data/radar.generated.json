@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-11-16T01:03:49.203Z",
+  "updatedAt": "2026-11-23T01:44:59.141Z",
   "items": [
     {
       "id": "hugging-face",
       "source": "Hugging Face Papers",
       "topic": "Machine-learning research",
-      "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
-      "description": "PhysLoop leverages large language models to guide video generation, selection, and correction, enabling physically consistent self-improvement and controllable data construction for video...",
-      "href": "https://huggingface.co/papers/2611.16748",
-      "publishedAt": "2026-11-13"
+      "title": "AltRA-Test: An Alternative Annotator Test for LLM Judges Without Shared Annotators",
+      "description": "A statistical test, AltRA-Test, determines when large language models can replace human annotators by comparing inter-annotator agreement in resampled mixed human-LLM panels, and evaluations...",
+      "href": "https://huggingface.co/papers/2611.26073",
+      "publishedAt": "2026-11-20"
     },
     {
       "id": "pytorch",
       "source": "PyTorch Blog",
       "topic": "ML systems practice",
-      "title": "Optimizing Streaming Speech Recognition on Arm® Edge Devices with ExecuTorch",
-      "description": "When you’re speaking to a device, you expect text to appear as you talk. That makes streaming automatic speech recognition (ASR) a different challenge from batch transcription, where the...",
-      "href": "https://pytorch.org/blog/optimizing-streaming-speech-recognition-on-arm-edge-devices-with-executorch/",
-      "publishedAt": "2026-10-26"
+      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
+      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel&#8217;s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or...",
+      "href": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
+      "publishedAt": "2026-11-12"
     },
     {
       "id": "github",
       "source": "GitHub Blog",
       "topic": "Software engineering",
-      "title": "GitHub Universe 2026: Evolving every layer of the stack",
-      "description": "Today, we laid out our vision for GitHub as the most comprehensive, end-to-end software delivery system in the world. The post GitHub Universe 2026: Evolving every layer of the stack...",
-      "href": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
-      "publishedAt": "2026-10-28"
+      "title": "The best things in open source are built together",
+      "description": "Introducing Replica and the Open Source Accessibility Framework, new open source projects for collaboration and inclusion. The post The best things in open source are built together appeared...",
+      "href": "https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/",
+      "publishedAt": "2026-11-19"
     },
     {
       "id": "arxiv",
